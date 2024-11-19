@@ -2,18 +2,21 @@
 ^!e::  ; Ctrl+Alt+E
 
 {
-  ; 复制原先文本
+  ; Copy text to clipboard
   A_Clipboard := ""
   Send "^c"  ; Ctrl+C
   ClipWait(1)
 
-  ; 粘贴进临时文件
+  ; Paste text into a temporary file
   TempFile := "vim_ahk.tex" 
   FileAppend(A_Clipboard, TempFile)
 
-  ; 用 Vim 打开文件
+  ; Open file in vim
   A_Clipboard := ""
   RunWait("nvim.exe " TempFile,)
+  ; If you are using neovide, use the following line instead:
+  ; RunWait("neovide.exe " TempFile,)
+  
   A_Clipboard := RTrim(FileRead(TempFile), "`r`n")
   ClipWait()
 
