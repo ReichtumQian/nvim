@@ -553,15 +553,15 @@ snippet OO "emptyset" iA
 endsnippet
 
 snippet RR "real" iA
-\R
+\mathbb{R}
 endsnippet
 
 snippet QQ "Q" iA
-\Q
+\mathbb{Q}
 endsnippet
 
 snippet ZZ "Z" iA
-\Z
+\mathbb{Z}
 endsnippet
 
 snippet <! "normal" iA
@@ -646,79 +646,123 @@ endsnippet
 # snippets
 
 context "math()"
-snippet '(?<!\\)(?<![a-zA-Z])a' "alpha" rw
+snippet '(?<!\\)(?<![a-zA-Z])`a' "alpha" rwA
 \\alpha
 endsnippet
 
 context "math()"
-snippet '(?<!\\)(?<![a-zA-Z])b' "beta" rw
+snippet '(?<!\\)(?<![a-zA-Z])`A' "forall" rwA
+\\forall
+endsnippet
+
+context "math()"
+snippet '(?<!\\)(?<![a-zA-Z])`b' "beta" rwA
 \\beta
 endsnippet
 
 context "math()"
-snippet '(?<!\\)(?<![a-zA-Z])d' "delta" rw
+snippet '(?<!\\)(?<![a-zA-Z])`d' "delta" rwA
 \\delta
 endsnippet
 
+priority 10
 context "math()"
-snippet '(?<!\\)(?<![a-zA-Z])e' "epsilon" rw
+snippet '(?<!\\)(?<![a-zA-Z])`e' "epsilon" rwA
 \\epsilon
 endsnippet
 
+priority 100
 context "math()"
-snippet '(?<!\\)(?<![a-zA-Z])ve' "varepsilon" rw
+snippet '(?<!\\)(?<![a-zA-Z])``e' "varepsilon" rwA
 \\varepsilon
 endsnippet
 
 context "math()"
-snippet '(?<!\\)(?<![a-zA-Z])g' "gamma" rw
-\\gamma
-endsnippet
-
-context "math()"
-snippet '(?<!\\)(?<![a-zA-Z])h' "eta" rw
-\\eta
-endsnippet
-
-context "math()"
-snippet '(?<!\\)(?<![a-zA-Z])m' "mu" rw
-\\mu
-endsnippet
-
-context "math()"
-snippet '(?<!\\)(?<![a-zA-Z])n' "nu" rw
-\\nu
-endsnippet
-
-context "math()"
-snippet '(?<!\\)(?<![a-zA-Z])p' "pi" rw
-\\pi
-endsnippet
-
-context "math()"
-snippet '(?<!\\)(?<![a-zA-Z])t' "tau" rw
-\\tau
-endsnippet
-
-context "math()"
-snippet '(?<!\\)(?<![a-zA-Z])y' "psi" rw
-\\psi
-endsnippet
-
-context "math()"
-snippet '(?<!\\)(?<![a-zA-Z])z' "zeta" rw
-\\zeta
-endsnippet
-
-context "math()"
-snippet '(?<!\\)(?<![a-zA-Z])phi' "phi" rwA
+snippet '(?<!\\)(?<![a-zA-Z])`f' "phi" rwA
 \\phi
 endsnippet
 
 context "math()"
-snippet '(?<!\\)(?<![a-zA-Z])vphi' "varphi" rwA
-\\varphi
+snippet '(?<!\\)(?<![a-zA-Z])`g' "gamma" rwA
+\\gamma
 endsnippet
+
+context "math()"
+snippet '(?<!\\)(?<![a-zA-Z])`h' "eta" rwA
+\\eta
+endsnippet
+
+context "math()"
+snippet '(?<!\\)(?<![a-zA-Z])`k' "kappa" rwA
+\\kappa
+endsnippet
+
+context "math()"
+snippet '(?<!\\)(?<![a-zA-Z])`l' "lambda" rwA
+\\lambda
+endsnippet
+
+context "math()"
+snippet '(?<!\\)(?<![a-zA-Z])`m' "mu" rwA
+\\mu
+endsnippet
+
+context "math()"
+snippet '(?<!\\)(?<![a-zA-Z])`n' "nu" rwA
+\\nu
+endsnippet
+
+context "math()"
+snippet '(?<!\\)(?<![a-zA-Z])`o' "omega" rwA
+\\omega
+endsnippet
+
+context "math()"
+snippet '(?<!\\)(?<![a-zA-Z])`p' "pi" rwA
+\\pi
+endsnippet
+
+context "math()"
+snippet '(?<!\\)(?<![a-zA-Z])`q' "theta" rwA
+\\theta
+endsnippet
+
+context "math()"
+snippet '(?<!\\)(?<![a-zA-Z])`r' "rho" rwA
+\\rho
+endsnippet
+
+context "math()"
+snippet '(?<!\\)(?<![a-zA-Z])`s' "sigma" rwA
+\\sigma
+endsnippet
+
+context "math()"
+snippet '(?<!\\)(?<![a-zA-Z])`t' "tau" rwA
+\\tau
+endsnippet
+
+context "math()"
+snippet '(?<!\\)(?<![a-zA-Z])`w' "xi" rwA
+\\xi
+endsnippet
+
+context "math()"
+snippet '(?<!\\)(?<![a-zA-Z])`x' "chi" rwA
+\\chi
+endsnippet
+
+context "math()"
+snippet '(?<!\\)(?<![a-zA-Z])`y' "psi" rwA
+\\psi
+endsnippet
+
+context "math()"
+snippet '(?<!\\)(?<![a-zA-Z])`z' "zeta" rwA
+\\zeta
+endsnippet
+
+
 
 # ==============================================================================
 
