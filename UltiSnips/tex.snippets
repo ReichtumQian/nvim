@@ -227,7 +227,7 @@ snippet bmat "bmat" iA
 endsnippet
 
 context "math()"
-snippet () "left( right)" iA
+snippet lr() "left( right)" iA
 \left( ${1:${VISUAL}} \right) $0
 endsnippet
 
@@ -430,6 +430,7 @@ snippet xx "cross" iA
 endsnippet
 
 priority 100
+context "math()"
 snippet ** "cdot" iA
 \cdot 
 endsnippet

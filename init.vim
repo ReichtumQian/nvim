@@ -28,4 +28,4 @@ filetype plugin indent on
 autocmd FileType markdown setlocal filetype=tex
 
 " Add $ pair
-let g:AutoPairs = {'$': '$'}
+let g:AutoPairs = {'$': '$', '(':')', '{':'}', '[':']', "'":"'", '"':'"', '`':'`'}
