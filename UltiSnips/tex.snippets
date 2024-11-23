@@ -605,29 +605,6 @@ snippet cvec "column vector" iA
 \begin{pmatrix} ${1:x}_${2:1}\\\\ \vdots\\\\ $1_${2:n} \end{pmatrix}
 endsnippet
 
-priority 10
-context "math()"
-snippet "bar" "bar" riA
-\overline{$1}$0
-endsnippet
-
-priority 100
-context "math()"
-snippet "([a-zA-Z])bar" "bar" riA
-\overline{`!p snip.rv=match.group(1)`}
-endsnippet
-
-priority 10
-context "math()"
-snippet "hat" "hat" riA
-\hat{$1}$0
-endsnippet
-
-priority 100
-context "math()"
-snippet "([a-zA-Z])hat" "hat" riA
-\hat{`!p snip.rv=match.group(1)`}
-endsnippet
 
 snippet letw "let omega" iA
 Let $\Omega \subset \C$ be open.
@@ -643,7 +620,7 @@ snippet DD "D" iA
 endsnippet
 
 # ==============================================================================
-# snippets
+# math symbols
 
 context "math()"
 snippet '(?<!\\)(?<![a-zA-Z])`a' "alpha" rwA
@@ -762,8 +739,67 @@ snippet '(?<!\\)(?<![a-zA-Z])`z' "zeta" rwA
 \\zeta
 endsnippet
 
-
-
 # ==============================================================================
+# math environments
+
+priority 10
+context "math()"
+snippet "bar" "bar" riA
+\overline{$1}$0
+endsnippet
+
+priority 100
+context "math()"
+snippet "([a-zA-Z])bar" "bar" riA
+\overline{`!p snip.rv=match.group(1)`}
+endsnippet
+
+priority 10
+context "math()"
+snippet "hat" "hat" riA
+\hat{$1}$0
+endsnippet
+
+priority 100
+context "math()"
+snippet "([a-zA-Z])hat" "hat" riA
+\hat{`!p snip.rv=match.group(1)`}
+endsnippet
+
+priority 10
+context "math()"
+snippet "mathbf" "mathbf" riA
+\mathbf{$1}$0
+endsnippet
+
+priority 100
+context "math()"
+snippet "([a-zA-Z])mathbf" "mathbf" riA
+\mathbf{`!p snip.rv=match.group(1)`}
+endsnippet
+
+priority 10
+context "math()"
+snippet "mathbb" "mathbb" riA
+\mathbb{$1}$0
+endsnippet
+
+priority 100
+context "math()"
+snippet "([a-zA-Z])mathbb" "mathbb" riA
+\mathbb{`!p snip.rv=match.group(1)`}
+endsnippet
+
+priority 10
+context "math()"
+snippet "mathcal" "mathcal" riA
+\mathcal{$1}$0
+endsnippet
+
+priority 100
+context "math()"
+snippet "([a-zA-Z])mathcal" "mathcal" riA
+\mathcal{`!p snip.rv=match.group(1)`}
+endsnippet
 
 # vim:ft=snippets
