@@ -768,38 +768,44 @@ endsnippet
 
 priority 10
 context "math()"
-snippet "mathbf" "mathbf" riA
+snippet "'b" "'b" riA
 \mathbf{$1}$0
 endsnippet
 
 priority 100
 context "math()"
-snippet "([a-zA-Z])mathbf" "mathbf" riA
+snippet "([a-zA-Z])'b" "'b" riA
 \mathbf{`!p snip.rv=match.group(1)`}
 endsnippet
 
 priority 10
 context "math()"
-snippet "mathbb" "mathbb" riA
+snippet "'t" "'t" riA
 \mathbb{$1}$0
 endsnippet
 
 priority 100
 context "math()"
-snippet "([a-zA-Z])mathbb" "mathbb" riA
+snippet "([a-zA-Z])'t" "'t" riA
 \mathbb{`!p snip.rv=match.group(1)`}
 endsnippet
 
 priority 10
 context "math()"
-snippet "mathcal" "mathcal" riA
+snippet "'c" "'c" riA
 \mathcal{$1}$0
 endsnippet
 
 priority 100
 context "math()"
-snippet "([a-zA-Z])mathcal" "mathcal" riA
+snippet "([a-zA-Z])'c" "'c" riA
 \mathcal{`!p snip.rv=match.group(1)`}
 endsnippet
+
+context "math()"
+snippet "\\{" "\\{" riA
+\\{$1\\}
+endsnippet
+
 
 # vim:ft=snippets
