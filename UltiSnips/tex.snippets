@@ -739,8 +739,33 @@ snippet '(?<!\\)(?<![a-zA-Z])`z' "zeta" rwA
 \\zeta
 endsnippet
 
+context "math()"
+snippet "`'" "`'" riA
+\prime
+endsnippet
+
+context "math()"
+snippet "`\*" "`\*" riA
+\times
+endsnippet
+
+context "math()"
+snippet "`8" "`8" riA
+\infty
+endsnippet
+
 # ==============================================================================
 # math environments
+
+context "math()"
+snippet "_" "_" riA
+_{$1}$0
+endsnippet
+
+context "math()"
+snippet "\^" "\^" riA
+\^{$1}$0
+endsnippet
 
 priority 10
 context "math()"
@@ -825,6 +850,8 @@ context "math()"
 snippet "([a-zA-Z])'r" "'r" riA
 \mathrm{`!p snip.rv=match.group(1)`}
 endsnippet
+
+
 
 context "math()"
 snippet "\\{" "\\{" riA
