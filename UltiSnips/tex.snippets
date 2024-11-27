@@ -637,9 +637,16 @@ snippet '(?<!\\)(?<![a-zA-Z])`b' "beta" rwA
 \\beta
 endsnippet
 
+priority 10
 context "math()"
 snippet '(?<!\\)(?<![a-zA-Z])`d' "delta" rwA
 \\delta
+endsnippet
+
+priority 100
+context "math()"
+snippet '(?<!\\)(?<![a-zA-Z])``d' "partial" rwA
+\\partial
 endsnippet
 
 priority 10
@@ -692,6 +699,11 @@ endsnippet
 context "math()"
 snippet '(?<!\\)(?<![a-zA-Z])`o' "omega" rwA
 \\omega
+endsnippet
+
+context "math()"
+snippet '(?<!\\)(?<![a-zA-Z])`O' "Omega" rwA
+\\Omega
 endsnippet
 
 context "math()"
@@ -754,6 +766,18 @@ snippet "`8" "`8" riA
 \infty
 endsnippet
 
+priority 10
+context "math()"
+snippet "`\." "`." riA
+\cdot
+endsnippet
+
+priority 100
+context "math()"
+snippet "``\." "``." riA
+\cdots
+endsnippet
+
 # ==============================================================================
 # math environments
 
@@ -764,7 +788,7 @@ endsnippet
 
 context "math()"
 snippet "\^" "\^" riA
-\^{$1}$0
+^{$1}$0
 endsnippet
 
 priority 10
