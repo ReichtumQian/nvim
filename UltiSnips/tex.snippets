@@ -313,14 +313,6 @@ snippet rd "to the ... power" iA
 ^{($1)}$0
 endsnippet
 
-snippet __ "subscript" iA
-_{$1}$0
-endsnippet
-
-snippet ooo "\infty" iA
-\infty
-endsnippet
-
 snippet rij "mrij" i
 (${1:x}_${2:n})_{${3:$2}\\in${4:\\N}}$0
 endsnippet
@@ -339,11 +331,6 @@ snippet EE "geq" iA
 endsnippet
 
 context "math()"
-snippet AA "forall" iA
-\forall 
-endsnippet
-
-context "math()"
 snippet xnn "xn" iA
 x_{n}
 endsnippet
@@ -351,27 +338,6 @@ endsnippet
 context "math()"
 snippet ynn "yn" iA
 y_{n}
-endsnippet
-
-
-context "math()"
-snippet xii "xi" iA
-x_{i}
-endsnippet
-
-context "math()"
-snippet yii "yi" iA
-y_{i}
-endsnippet
-
-context "math()"
-snippet xjj "xj" iA
-x_{j}
-endsnippet
-
-context "math()"
-snippet yjj "yj" iA
-y_{j}
 endsnippet
 
 context "math()"
@@ -382,10 +348,6 @@ endsnippet
 context "math()"
 snippet xmm "x" iA
 x_{m}
-endsnippet
-
-snippet R0+ "R0+" iA
-\\R_0^+
 endsnippet
 
 snippet plot "Plot" w
@@ -411,28 +373,8 @@ $0
 endsnippet
 
 context "math()"
-snippet mcal "mathcal" iA
-\mathcal{$1}$0
-endsnippet
-
-snippet lll "l" iA
-\ell
-endsnippet
-
-context "math()"
-snippet nabl "nabla" iA
-\nabla 
-endsnippet
-
-context "math()"
 snippet xx "cross" iA
 \times 
-endsnippet
-
-priority 100
-context "math()"
-snippet ** "cdot" iA
-\cdot 
 endsnippet
 
 context "math()"
@@ -456,19 +398,6 @@ priority 200
 context "math()"
 snippet '(?<!\\)(arcsin|arccos|arctan|arccot|arccsc|arcsec|pi|zeta|int)' "ln" rwA
 \\`!p snip.rv = match.group(1)`
-endsnippet
-
-
-priority 100
-context "math()"
-snippet -> "to" iA
-\to 
-endsnippet
-
-priority 200
-context "math()"
-snippet <-> "leftrightarrow" iA
-\leftrightarrow
 endsnippet
 
 context "math()"
@@ -643,10 +572,22 @@ snippet '(?<!\\)(?<![a-zA-Z])`d' "delta" rwA
 \\delta
 endsnippet
 
+priority 10
+context "math()"
+snippet '(?<!\\)(?<![a-zA-Z])`D' "Delta" rwA
+\\Delta
+endsnippet
+
 priority 100
 context "math()"
 snippet '(?<!\\)(?<![a-zA-Z])``d' "partial" rwA
 \\partial
+endsnippet
+
+priority 100
+context "math()"
+snippet '(?<!\\)(?<![a-zA-Z])``D' "nabla" rwA
+\\nabla
 endsnippet
 
 priority 10
@@ -681,9 +622,16 @@ snippet '(?<!\\)(?<![a-zA-Z])`k' "kappa" rwA
 \\kappa
 endsnippet
 
+priority 10
 context "math()"
 snippet '(?<!\\)(?<![a-zA-Z])`l' "lambda" rwA
 \\lambda
+endsnippet
+
+priority 100
+context "math()"
+snippet '(?<!\\)(?<![a-zA-Z])``l' "ell" rwA
+\\ell
 endsnippet
 
 context "math()"
@@ -777,6 +725,7 @@ context "math()"
 snippet "``\." "``." riA
 \cdots
 endsnippet
+
 
 # ==============================================================================
 # math environments
