@@ -121,10 +121,10 @@ ${1:${VISUAL}}
 .\] $0
 endsnippet
 
-snippet ali "Align" bA
+snippet ali "Align" iw
 \begin{align*}
 	${1:${VISUAL}}
-.\end{align*}
+\end{align*}
 endsnippet
 
 
@@ -766,6 +766,18 @@ endsnippet
 
 priority 10
 context "math()"
+snippet "'." "'." riA
+\dot{$1}$0
+endsnippet
+
+priority 100
+context "math()"
+snippet "([a-zA-Z])'." "'." riA
+\dot{`!p snip.rv=match.group(1)`}
+endsnippet
+
+priority 10
+context "math()"
 snippet "'~" "'~" riA
 \tilde{$1}$0
 endsnippet
@@ -824,12 +836,13 @@ snippet "([a-zA-Z])'r" "'r" riA
 \mathrm{`!p snip.rv=match.group(1)`}
 endsnippet
 
-
-
 context "math()"
 snippet "\\{" "\\{" riA
 \\{$1\\}
 endsnippet
+
+# ==============================================================================
+
 
 
 # vim:ft=snippets
