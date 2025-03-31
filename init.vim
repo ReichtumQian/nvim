@@ -9,6 +9,7 @@ endif
 " call the vim-plug
 call plug#begin()
 Plug 'preservim/vim-markdown'
+    let g:vim_markdown_folding_disabled = 1
 
 Plug 'sirver/ultisnips'
     let g:UltiSnipsExpandTrigger = '<tab>'
